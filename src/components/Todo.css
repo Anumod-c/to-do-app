@@ -43,3 +43,32 @@ li{
     border-radius: 5px;
     padding: 10px;
 }
+.list-items{
+    display: flex;
+   
+}
+.list-items .list-item-list{
+flex: 1;
+}
+.span{
+    display: flex;
+}
+.list-items .list-item-icons{
+    padding-left: 5px;
+    font-size: 25px;
+    cursor: pointer;
+}
+#complete{
+    color: green;
+
+}
+#edit{
+    color: #007bff;
+}
+#delete{
+    color: orange;
+}
+#list-item{
+    text-decoration: line-through;
+    opacity: 0.5;
+}
