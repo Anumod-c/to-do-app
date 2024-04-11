@@ -5,7 +5,6 @@ import { MdDelete } from "react-icons/md";
 import { FaEdit } from "react-icons/fa";
 import { IoMdDoneAll } from 'react-icons/io';
 
-
 function Todo() {
   const [todo, setTodo] = useState('');
   const [todos, setTodos] = useState([]);
@@ -35,6 +34,10 @@ function Todo() {
   useEffect(() => {
     inputRef.current.focus()
   });
+  useEffect(()=>{
+    console.log("");
+    return (console.log("unmounting"))
+  },[])
   //delteting
   const onDelete = (id) => {
     setTodos(todos.filter((to) => {
@@ -70,6 +73,7 @@ function Todo() {
         }} />
         <button onClick={addTodo}>{editId ? "EDIT" : "ADD"}</button>
       </form   >
+      
 
       <div className='list'>
         <ul >
@@ -90,6 +94,8 @@ function Todo() {
           }
         </ul>
       </div>
+      
+      
     </div>
   )
 }
